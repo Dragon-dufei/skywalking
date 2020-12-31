@@ -40,6 +40,14 @@
     <name>apm</name>
     <url>https://github.com/apache/skywalking</url>
 
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
     <scm>
         <url>https://github.com/apache/skywalking</url>
         <connection>scm:git:https://github.com/apache/skywalking.git</connection>
@@ -595,8 +603,8 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>${maven-checkstyle-plugin.version}</version>
                 <configuration>
-                    <configLocation>${maven.multiModuleProjectDirectory}/apm-checkstyle/checkStyle.xml</configLocation>
-                    <headerLocation>${maven.multiModuleProjectDirectory}/apm-checkstyle/CHECKSTYLE_HEAD</headerLocation>
+                    <configLocation>D:\project\iiot\skywalking\apm-checkstyle\checkStyle.xml</configLocation>
+                    <headerLocation>D:\project\iiot\skywalking\apm-checkstyle\CHECKSTYLE_HEAD</headerLocation>
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
                     <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -631,7 +639,7 @@
                         **/generated/*_jmhTest.java
                     </excludes>
                     <propertyExpansion>
-                        import.control=${maven.multiModuleProjectDirectory}/apm-checkstyle/importControl.xml
+                        import.control=D:\project\iiot\skywalking\apm-checkstyle\importControl.xml
                     </propertyExpansion>
                 </configuration>
                 <executions>
